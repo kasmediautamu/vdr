@@ -1,0 +1,42 @@
+@import '../../styles/index.scss';
+.vdr-getstarted{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .heading{
+        font-size: 18px;
+        span {
+            font-size: 18px;
+            padding-right:5px;
+        }
+    }
+    .vdr-intro {
+        @include font_pp;
+        color: $primary-grey;
+        font-weight: 600;
+        background-color: #fff;
+        margin-top: 5px;
+        padding: 10px 40px;
+        font-size: 16px;
+        text-align: center;
+    }
+    .vdr-intro:nth-of-type(1){
+        width:80%;
+        padding: 10px 10px;
+    }
+    .start-form {
+        margin: 10px 0;
+        .login-link,.form-check {
+            font-size: 13px;
+            span {
+                color: $accent-green; 
+                cursor: pointer;
+            }     
+        }
+        
+        .login-link{
+            padding-top: 10px;
+        }
+    }
+    
+}

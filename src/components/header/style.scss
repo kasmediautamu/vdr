@@ -1,0 +1,7 @@
+@import '../../styles/index.scss';
+.navbar-brand {
+    @include image-logo-sm;
+    height: 33px;
+    width: 242px;
+
+}

@@ -1,0 +1,306 @@
+@import '../../styles/index.scss';
+@mixin separator {
+    height: 1px;
+    background-color: #F3F3F7;
+    margin: 10px 0;
+}
+@mixin vdr-btn {
+                background-color: $primary-grey;
+                @include font_pp;
+                font-size: 12px;
+                color: #fff;
+                border: none;
+                &:hover {
+                    background-color: $accent-green;
+                }
+}
+@mixin title {
+                @include font_pp;
+                font-size: 16px;
+                font-weight: 400;
+                color: $primary-grey;
+}
+.vdr-mypage {
+    &__website {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        &--link {
+            margin: 0 20px;
+            .title {
+                @include font_pp;
+                font-size: 16px;
+                color:$dark;
+                font-weight: 400;
+
+            }
+            span {
+                @include font_pp;
+                font-size: 12px;
+                color:$dark;
+                font-weight: 300;
+            }
+
+        }
+    }
+    &__report {
+        &--header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            .left {
+                @include title();
+            }
+            .right {
+              display: flex;
+              flex-direction: row;
+              align-items: baseline;
+              justify-content: space-between; 
+               .date,.time {
+                @include font_pp;
+                color: $dark;
+                font-size: 12px;
+               }
+            }
+        }
+        &--separator {
+           @include separator();
+        }
+        .download-btn{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            .btn-primary {
+                @include vdr-btn();
+                display: flex;
+                .icon {
+                    @include download-icon;
+                    height:20px;
+                    width:20px;
+                    margin-left:10px;
+                }
+            }
+        }
+        &--sum{
+            background-color: #F3F3F7;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            .report-card{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding: 20px 50px;
+                
+                .left {
+                    .title {
+                        @include font_pp;
+                        font-size: 16px;
+                        color: $primary-grey;
+                        font-weight: 400;
+                        font-style: italic;
+                        margin: 0 0 20px 0;
+                    }
+                    .attributes {
+                        list-style: none;
+                        .attribute{
+                            display: flex;
+                            flex-direction: row;
+                            color: $dark;
+                            .icon {
+                                @include tick-icon;
+                                width: 20px;
+                                height:20px;
+                            }
+                            .text {
+                                @include font_pp;
+                                font-size: 12px;
+                                color: $dark;
+                                padding: 0 10px;
+                            }
+                        }
+                    }
+                }
+                .right {
+                    @include about-image;
+                    width: 449px;
+                    height: 220px;
+                }
+            }
+
+        }
+       
+    }
+    &__plan {
+        &--header {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            .title {
+                @include font_pp;
+                font-size: 16px;
+                font-weight: 400;
+                color: $primary-grey;
+                padding-right: 20px;
+            }
+            .linkto {
+                @include font_pp;
+                color: #fff;
+                background-color: $accent-green;
+                padding: 10px 15px;
+                
+            }
+        }
+        &--separator {
+            @include separator()
+        }
+        &--desc {
+            @include font_pp;
+            font-size: 14px;
+            color: $dark;
+        }
+        &--services {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 20px 0;
+            .service {
+                flex-basis: 32%;
+                background-color: #F3F3F7;
+                border-radius: 5px;
+                padding:20px;
+                .num {
+                    @include font_pp;
+                    font-style: italic;
+                }
+                .service-icon-01 {
+                    @include total-icon;
+                    height:160px;
+                    width:160px;
+                }
+                .service-icon-02 {
+                    @include monitoring-icon;
+                    height:160px;
+                    width:160px;
+                }
+                .service-icon-03 {
+                    @include online-icon;
+                    height:160px;
+                    width:160px;
+                }
+                .icon-name {
+                    display:flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+                .service-name {
+                    @include font_pp;
+                }
+                .features {
+                    list-style: none;
+                    
+                    .feat {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        .feat-icon {
+                            @include tick-icon;
+                            height:20px;
+                            width:20px;
+                        }
+                        .feat-name {
+                            @include font_pp;
+                            padding-left:10px;
+                            font-size: 12px;
+                            color: $dark;
+                            font-weight: 400;
+                        }
+                    }
+                }
+            }
+        }
+        &--btns{
+            
+            .btn-secondary,.btn-primary {
+                @include vdr-btn();
+                margin: 0 10px;
+            }
+        }
+
+    }
+    &__forms {
+        &--contact {
+            .title {
+                @include title();
+
+            }
+            .separator {
+                @include separator();
+                margin-bottom: 20px;
+            }
+            .linkto {
+                @include vdr-btn();
+                padding: 10px;
+                margin: 10px 0;
+            }
+        }
+        &--consultation{
+            .header {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                .title {
+                    @include title();
+                    padding-right:20px;
+                }
+                .linkto {
+                    background-color: $accent-green;
+                    font-size: 12px;
+                    @include font_pp;
+                    color: #fff;
+                    padding: 10px;
+                }
+            }
+            .separator {
+                @include separator();
+            }
+            .form-links {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding: 20px 0;
+                .left {
+                    @include consultation-illustration;
+                    height:280px;
+                    width:400px;
+                }
+                .right {
+                   .desc {
+                    @include font_pp;
+                    font-size: 16px;
+                    font-weight: 400;
+                   }
+                   span {
+                    @include font_pp;
+                    font-size: 12px;
+                    font-weight: 400;
+                   } 
+                }
+            }
+
+        }
+        &--btns {
+            margin: 20px 0;
+            .linkto {
+                @include vdr-btn();
+                margin: 0 10px;
+                padding:10px;
+                
+            }
+        }
+    }
+}

@@ -1,0 +1,50 @@
+@import '../../styles/index.scss';
+.vdr-footer{
+    background-color: $primary-grey;
+    padding-top: 20px;
+    &__main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color:#fff;
+    &--left{
+        @include footer-logo;
+        height: 33px;
+        width: 285px;
+        
+    }
+    &--right{
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        .link{
+            padding: 0 10px;
+            border-right: 1px solid #fff;
+            @include font_pp;
+            font-size: 14px;
+            cursor: pointer;
+            
+        }
+        .link:nth-of-type(5){
+            border-right:none;
+        }
+
+    }
+    }
+    .vdr-copyright {
+        background-color: $primary-grey;
+        width:100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 20px;
+        &__logo{
+            @include copyright;
+            width: 167px;
+            height:22px;
+        }
+    }
+}
+
